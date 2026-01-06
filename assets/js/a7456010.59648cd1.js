@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdoc_setup_server_install=globalThis.webpackChunkdoc_setup_server_install||[]).push([[1235],{8552(s){s.exports=JSON.parse('{"name":"docusaurus-plugin-content-pages","id":"default"}')}}]);
