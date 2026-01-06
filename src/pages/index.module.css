@@ -1,0 +1,139 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  padding-bottom: 4rem;
+}
+
+.hero {
+  position: relative;
+  padding: 5rem 0 3rem;
+  overflow: hidden;
+}
+
+.heroGlow {
+  position: absolute;
+  inset: -40% 5% auto -30%;
+  height: 520px;
+  background: radial-gradient(circle, rgba(31, 176, 167, 0.22), transparent 65%);
+  filter: blur(10px);
+  z-index: 0;
+}
+
+.heroGrid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.heroContent {
+  animation: fadeUp 0.8s ease both;
+}
+
+.heroTag {
+  display: inline-flex;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(15, 106, 102, 0.14);
+  color: var(--ifm-color-primary);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.heroTitle {
+  font-size: 2.8rem;
+  margin: 1rem 0 0.75rem;
+  letter-spacing: -0.03em;
+}
+
+.heroLead {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  max-width: 560px;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.heroActions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.heroPanel {
+  background: var(--site-surface);
+  border: 1px solid var(--site-border);
+  border-radius: 22px;
+  padding: 1.6rem;
+  box-shadow: var(--site-shadow);
+}
+
+.heroPanel h2 {
+  margin-top: 0;
+}
+
+.heroPanel ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.section {
+  padding: 0 0 2rem;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.5rem;
+  border-radius: 18px;
+  border: 1px solid var(--site-border);
+  background: var(--site-surface);
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--site-shadow);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 996px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+}

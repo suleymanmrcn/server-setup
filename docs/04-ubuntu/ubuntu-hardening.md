@@ -1,0 +1,27 @@
+---
+title: Ubuntu Guvenlik Sertlestirme
+sidebar_position: 2
+---
+
+## Amac
+Bu sayfa, **Ubuntu Guvenlik Sertlestirme** konusunun uretim odakli iskeletini sunar.
+
+## Kapsam
+- Bu bolum temel kararlar, varsayimlar ve minimum guvenlik beklentilerini kapsar.
+
+## Icerik Plani
+- UFW ve kurallar
+- SSH port degisimi
+- AppArmor profilleri
+
+## Uygulama Adimlari
+1. Gereksinimleri dogrula ve onayla.
+2. Varsayilanlari guvenli hale getir.
+3. Degisiklikleri kaydet ve izlenebilirlik sagla.
+
+## Dogrulama
+- Temel servislerin calistigini kontrol et.
+- Guvenlik ayarlarinin aktif oldugunu test et.
+
+## Notlar
+- Bu bolum bir iskelet olarak tasarlanmistir; ortam ve politika gereksinimlerine gore genisletilmelidir.
