@@ -1,6 +1,6 @@
 ---
 title: Dependency Yonetimi
-sidebar_position: 17
+sidebar_position: 32
 ---
 
 Runtime ve kutuphane bagimliliklarini kontrol altina alir.

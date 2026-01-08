@@ -1,6 +1,6 @@
 ---
 title: Secrets Yonetimi
-sidebar_position: 16
+sidebar_position: 31
 ---
 
 Sifre ve token gibi gizli verilerin guvenli saklanmasi ve dagitimi.

@@ -1,41 +1,18 @@
-# Website
+# Server Setup Docs
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Bu repo, production ortaminda Linux sunucu kurulum ve operasyon surecini yonetmek icin hazirlanmis teknik dokumantasyon setidir. Amac, kurulumdan guvenlik sertlestirmeye, operasyon rutinlerinden bulut ag tasarimina kadar tum kritik adimlari tek bir standartta toplamaktir.
 
-## Installation
+## Neler Icerir?
+- Ubuntu, CentOS, RHEL, Rocky/Alma icin kurulum + operasyon rehberleri
+- SSH, firewall, SELinux/AppArmor, fail2ban, audit gibi hardening basliklari
+- Paket yonetimi, otomatik guncellemeler, dependency ve secrets yonetimi
+- AWS ve Oracle Cloud icin VPC/VCN, subnet, SG/NACL, NAT/IGW, flow logs
+- Troubleshooting senaryolari ve kontrol akislari
 
-```bash
-yarn
-```
+## Hedef
+- Uretim ortaminda guvenli ve izlenebilir kurulum standardi
+- Kurum icin tekrar edilebilir, dokumante edilmis operasyon
+- Net checklist ve karar akislariyla riskleri azaltmak
 
-## Local Development
-
-```bash
-yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
-
-```bash
-yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+## Canli Dokuman
+https://suleymanmrcn.github.io/server-setup/

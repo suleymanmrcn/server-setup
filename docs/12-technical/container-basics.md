@@ -1,6 +1,6 @@
 ---
 title: Container Temelleri
-sidebar_position: 15
+sidebar_position: 30
 ---
 
 Container guvenligi, base image secimi ve guncelleme politikasini anlatir.

@@ -1,6 +1,6 @@
 ---
 title: Monitoring ve DDoS
-sidebar_position: 19
+sidebar_position: 34
 ---
 
 Trafik anomali tespiti ve temel DDoS onlemlerini ozetler.

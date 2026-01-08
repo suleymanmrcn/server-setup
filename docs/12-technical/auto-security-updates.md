@@ -1,6 +1,6 @@
 ---
 title: Otomatik Guvenlik Guncellemeleri
-sidebar_position: 18
+sidebar_position: 33
 ---
 
 Kritik guvenlik guncellemelerini otomatik almak icin kontrollu yaklasim.
