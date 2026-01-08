@@ -4,9 +4,19 @@ sidebar_position: 2
 ---
 
 ## Anahtar Tabanli Erisim
-- ssh-keygen -t ed25519
-- ssh-copy-id user@server
+```sh
+ssh-keygen -t ed25519
+ssh-copy-id user@server
+```
 
 ## Port Degisimi
-- /etc/ssh/sshd_config icinde Port ayari
-- systemctl reload sshd
+```sh
+# /etc/ssh/sshd_config
+Port 2222
+sudo systemctl reload sshd
+```
+
+## Kontrol
+```sh
+ss -lntp | grep sshd
+```

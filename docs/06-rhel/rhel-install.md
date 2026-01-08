@@ -3,25 +3,22 @@ title: RHEL Kurulum
 sidebar_position: 1
 ---
 
-## Amac
-Bu sayfa, **RHEL Kurulum** konusunun uretim odakli iskeletini sunar.
+RHEL icin kurumsal kurulum akisini ve subscription gereksinimini ozetler.
 
-## Kapsam
-- Bu bolum temel kararlar, varsayimlar ve minimum guvenlik beklentilerini kapsar.
+## Kurulum Tercihi
+- Minimal profil.
+- Disk plani: LVM + ayri /var.
+- Hostname ve timezone.
 
-## Icerik Plani
-- Subscription Manager
-- Anaconda profili
-- Kickstart
+## Subscription
+- Subscription Manager ile repo erisimi.
+- Kurulum sonrasi repo dogrulama.
 
-## Uygulama Adimlari
-1. Gereksinimleri dogrula ve onayla.
-2. Varsayilanlari guvenli hale getir.
-3. Degisiklikleri kaydet ve izlenebilirlik sagla.
+## Baslangic Sonrasi
+- dnf update
+- Ops kullanici + wheel
+- SSH hardening
 
-## Dogrulama
-- Temel servislerin calistigini kontrol et.
-- Guvenlik ayarlarinin aktif oldugunu test et.
-
-## Notlar
-- Bu bolum bir iskelet olarak tasarlanmistir; ortam ve politika gereksinimlerine gore genisletilmelidir.
+## Kontrol
+- `cat /etc/redhat-release`
+- `subscription-manager status`

@@ -3,25 +3,23 @@ title: CentOS Kurulum
 sidebar_position: 1
 ---
 
-## Amac
-Bu sayfa, **CentOS Kurulum** konusunun uretim odakli iskeletini sunar.
+CentOS icin uretim odakli kurulum ve ilk ayarlari verir.
 
-## Kapsam
-- Bu bolum temel kararlar, varsayimlar ve minimum guvenlik beklentilerini kapsar.
+## Kurulum Tercihi
+- Minimal profil.
+- Disk plani: LVM + ayri /var.
+- Hostname ve timezone.
 
-## Icerik Plani
-- Stream vs. classic
-- Anaconda profili
-- NetworkManager
+## Ag
+- NetworkManager (nmcli)
+- DNS ve NTP dogrulama
 
-## Uygulama Adimlari
-1. Gereksinimleri dogrula ve onayla.
-2. Varsayilanlari guvenli hale getir.
-3. Degisiklikleri kaydet ve izlenebilirlik sagla.
+## Baslangic Sonrasi
+- dnf update
+- Ops kullanici + wheel
+- SSH hardening
 
-## Dogrulama
-- Temel servislerin calistigini kontrol et.
-- Guvenlik ayarlarinin aktif oldugunu test et.
-
-## Notlar
-- Bu bolum bir iskelet olarak tasarlanmistir; ortam ve politika gereksinimlerine gore genisletilmelidir.
+## Kontrol
+- `cat /etc/centos-release`
+- `ip a`, `ip r`
+- `systemctl status sshd`

@@ -4,8 +4,12 @@ sidebar_position: 5
 ---
 
 ## systemctl
-- systemctl status nginx
-- systemctl enable --now sshd
+```sh
+systemctl status nginx
+systemctl enable --now sshd
+```
 
 ## journalctl
-- journalctl -u sshd -f
+```sh
+journalctl -u sshd -f
+```

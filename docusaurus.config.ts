@@ -95,12 +95,6 @@ const config: Config = {
           label: 'Faydali Linkler',
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'quiz',
-          position: 'left',
-          label: 'Quiz',
-        },
-        {
           type: 'localeDropdown',
           position: 'right',
         },

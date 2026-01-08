@@ -3,10 +3,22 @@ title: Boot ve Servis Sorunlari
 sidebar_position: 5
 ---
 
-## Belirtiler
-- Boot loop
-- Servis fail
+## Belirti
+- Sistem boot olmuyor
+- Servis fail durumunda
 
-## Kontrol
-- systemctl --failed
-- journalctl -b
+## Hizli Kontrol
+```sh
+systemctl --failed
+journalctl -b
+```
+
+## Olasi Sebepler
+- Yanlis fstab
+- Kernel update sonrasi sorun
+- Servis konfig hatasi
+
+## Cozum Akisi
+1. Son degisikligi tespit et
+2. Fail eden servisi logdan incele
+3. Gerekirse rollback uygula

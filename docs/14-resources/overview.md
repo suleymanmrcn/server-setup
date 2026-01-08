@@ -3,11 +3,10 @@ title: Faydali Linkler Genel Bakis
 sidebar_position: 1
 ---
 
-## Amac
-Guvenilir referanslar ve resmi dokumanlar tek yerde toplandi.
+Resmi dokumanlar, guvenlik rehberleri ve araclarin kisa listesi.
 
 ## Kategoriler
 - Resmi dokumanlar
 - Guvenlik rehberleri
-- Otomasyon ve IaC
+- Otomasyon/IaC
 - Monitoring ve log

@@ -3,25 +3,28 @@ title: Ubuntu Operasyon ve Bakim
 sidebar_position: 3
 ---
 
-## Amac
-Bu sayfa, **Ubuntu Operasyon ve Bakim** konusunun uretim odakli iskeletini sunar.
+Ubuntu uretim sistemlerinde rutin bakim ve operasyon adimlarini netlestirir.
 
-## Kapsam
-- Bu bolum temel kararlar, varsayimlar ve minimum guvenlik beklentilerini kapsar.
+## Patch Akisi
+```sh
+sudo apt update
+sudo apt -y upgrade
+```
 
-## Icerik Plani
-- Unattended upgrades
-- Logrotate
-- Geri alma
+## Log Kontrol
+```sh
+journalctl -p warning -b
+journalctl -u sshd -f
+```
 
-## Uygulama Adimlari
-1. Gereksinimleri dogrula ve onayla.
-2. Varsayilanlari guvenli hale getir.
-3. Degisiklikleri kaydet ve izlenebilirlik sagla.
+## Disk ve Performans
+```sh
+df -h
+free -h
+```
 
-## Dogrulama
-- Temel servislerin calistigini kontrol et.
-- Guvenlik ayarlarinin aktif oldugunu test et.
-
-## Notlar
-- Bu bolum bir iskelet olarak tasarlanmistir; ortam ve politika gereksinimlerine gore genisletilmelidir.
+## Rutin Checklist
+- [ ] Haftalik patch
+- [ ] Log rotasyonu
+- [ ] Disk doluluk kontrolu
+- [ ] Backup testi

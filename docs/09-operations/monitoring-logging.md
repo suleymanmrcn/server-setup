@@ -3,25 +3,35 @@ title: Izleme ve Log Yonetimi
 sidebar_position: 2
 ---
 
-## Amac
-Bu sayfa, **Izleme ve Log Yonetimi** konusunun uretim odakli iskeletini sunar.
+Metrik, log ve alarm altyapisini uretime uygun kurar.
 
-## Kapsam
-- Bu bolum temel kararlar, varsayimlar ve minimum guvenlik beklentilerini kapsar.
+## Minimum Monitoring
+- CPU, RAM, disk, network
+- Servis sagligi (HTTP, DB)
+- Disk doluluk ve inode
 
-## Icerik Plani
-- Metrix ve alarm
-- Log rota
-- Merkezi toplama
+## Alert Ornekleri
+- CPU > %85 (10dk)
+- Disk > %80
+- 5xx hata sayisi artisi
 
-## Uygulama Adimlari
-1. Gereksinimleri dogrula ve onayla.
-2. Varsayilanlari guvenli hale getir.
-3. Degisiklikleri kaydet ve izlenebilirlik sagla.
+## Loglama
+- Merkezi log (Loki/ELK)
+- Rotasyon ve saklama politikasi
+- Auth loglari oncelikli
 
-## Dogrulama
-- Temel servislerin calistigini kontrol et.
-- Guvenlik ayarlarinin aktif oldugunu test et.
+## Tool Onerileri
+| Ihtiyac | Oneri |
+| --- | --- |
+| Metrik | Prometheus + Grafana |
+| Log | Loki veya ELK |
+| Alert | Alertmanager |
 
-## Notlar
-- Bu bolum bir iskelet olarak tasarlanmistir; ortam ve politika gereksinimlerine gore genisletilmelidir.
+## Ornek Kontrol
+```sh
+journalctl -p warning -b
+ss -s
+```
+
+## Not
+Monitoring olmadan uretimde sorun tespiti gecikir.

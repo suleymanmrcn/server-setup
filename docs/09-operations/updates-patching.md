@@ -3,25 +3,27 @@ title: Guncellemeler ve Patch Yonetimi
 sidebar_position: 1
 ---
 
-## Amac
-Bu sayfa, **Guncellemeler ve Patch Yonetimi** konusunun uretim odakli iskeletini sunar.
+Patch penceresi, kritik guncelleme akisi ve rollback planini netlestirir.
 
-## Kapsam
-- Bu bolum temel kararlar, varsayimlar ve minimum guvenlik beklentilerini kapsar.
+## Patch Penceresi
+- Haftalik veya aylik planla.
+- Kritik CVE icin acil prosedur.
+- Degisiklik onayi ve duyuru zorunlu.
 
-## Icerik Plani
-- Guncelleme pencereleri
-- Kritik patch akisi
-- Rollback plan
+## Ornek Akis
+1. Etki analizi
+2. Guncelleme uygula
+3. Servis dogrula
+4. Rollback hazirligi
 
-## Uygulama Adimlari
-1. Gereksinimleri dogrula ve onayla.
-2. Varsayilanlari guvenli hale getir.
-3. Degisiklikleri kaydet ve izlenebilirlik sagla.
+## Ornek Komutlar
+```sh
+# Ubuntu
+apt list --upgradable
 
-## Dogrulama
-- Temel servislerin calistigini kontrol et.
-- Guvenlik ayarlarinin aktif oldugunu test et.
+# RHEL tabanli
+dnf check-update
+```
 
-## Notlar
-- Bu bolum bir iskelet olarak tasarlanmistir; ortam ve politika gereksinimlerine gore genisletilmelidir.
+## Not
+Backup yoksa patch uygulama riski artar.

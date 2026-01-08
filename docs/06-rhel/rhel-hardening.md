@@ -3,25 +3,24 @@ title: RHEL Guvenlik Sertlestirme
 sidebar_position: 2
 ---
 
-## Amac
-Bu sayfa, **RHEL Guvenlik Sertlestirme** konusunun uretim odakli iskeletini sunar.
+RHEL icin firewalld ve SELinux policy sertlestirmesini verir.
 
-## Kapsam
-- Bu bolum temel kararlar, varsayimlar ve minimum guvenlik beklentilerini kapsar.
+## SSH
+- Root login kapali
+- Password auth kapali
 
-## Icerik Plani
-- firewalld ve servisler
-- SSH sertlestirme
-- SELinux policy
+## firewalld
+```sh
+sudo firewall-cmd --add-service=ssh --permanent
+sudo firewall-cmd --reload
+```
 
-## Uygulama Adimlari
-1. Gereksinimleri dogrula ve onayla.
-2. Varsayilanlari guvenli hale getir.
-3. Degisiklikleri kaydet ve izlenebilirlik sagla.
+## SELinux
+```sh
+sestatus
+```
 
-## Dogrulama
-- Temel servislerin calistigini kontrol et.
-- Guvenlik ayarlarinin aktif oldugunu test et.
-
-## Notlar
-- Bu bolum bir iskelet olarak tasarlanmistir; ortam ve politika gereksinimlerine gore genisletilmelidir.
+## Kontrol Listesi
+- [ ] SSH anahtar tabanli
+- [ ] firewalld aktif
+- [ ] SELinux enforcing

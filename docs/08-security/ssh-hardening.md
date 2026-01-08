@@ -3,25 +3,34 @@ title: SSH Sertlestirme ve Port Degisimi
 sidebar_position: 1
 ---
 
-## Amac
-Bu sayfa, **SSH Sertlestirme ve Port Degisimi** konusunun uretim odakli iskeletini sunar.
+SSH erisimini uretim icin guvenli hale getirir.
 
-## Kapsam
-- Bu bolum temel kararlar, varsayimlar ve minimum guvenlik beklentilerini kapsar.
-
-## Icerik Plani
+## Minimum Policy
+- Root login kapali
+- Password auth kapali
 - Anahtar tabanli erisim
-- Port degistirme
-- Login kontrolu
+- Port degisikligi (istege bagli)
 
-## Uygulama Adimlari
-1. Gereksinimleri dogrula ve onayla.
-2. Varsayilanlari guvenli hale getir.
-3. Degisiklikleri kaydet ve izlenebilirlik sagla.
+## Ornek Konfig
+```ini
+# /etc/ssh/sshd_config
+Port 2222
+PermitRootLogin no
+PasswordAuthentication no
+PubkeyAuthentication yes
+```
+
+## Uygulama
+```sh
+sudo sshd -t
+sudo systemctl reload sshd
+```
 
 ## Dogrulama
-- Temel servislerin calistigini kontrol et.
-- Guvenlik ayarlarinin aktif oldugunu test et.
+```sh
+ss -lntp | grep sshd
+```
 
-## Notlar
-- Bu bolum bir iskelet olarak tasarlanmistir; ortam ve politika gereksinimlerine gore genisletilmelidir.
+## Sik Hatalar
+- Port degistirip firewall acmamak
+- Root kapatip sudo kullanici olmamasi

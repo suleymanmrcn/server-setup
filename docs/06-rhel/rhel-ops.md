@@ -3,25 +3,26 @@ title: RHEL Operasyon ve Bakim
 sidebar_position: 3
 ---
 
-## Amac
-Bu sayfa, **RHEL Operasyon ve Bakim** konusunun uretim odakli iskeletini sunar.
+RHEL uretim sistemlerinde patch, log ve kurumsal operasyon akisini verir.
 
-## Kapsam
-- Bu bolum temel kararlar, varsayimlar ve minimum guvenlik beklentilerini kapsar.
+## Patch Akisi
+```sh
+sudo dnf -y update
+subscription-manager status
+```
 
-## Icerik Plani
-- RHSM guncelleme
-- Reboot ve kpatch
-- Log ve audit
+## Log ve Audit
+```sh
+journalctl -p warning -b
+ausearch -m AVC -ts recent
+```
 
-## Uygulama Adimlari
-1. Gereksinimleri dogrula ve onayla.
-2. Varsayilanlari guvenli hale getir.
-3. Degisiklikleri kaydet ve izlenebilirlik sagla.
+## Kernel Bakim
+```sh
+rpm -q kernel
+```
 
-## Dogrulama
-- Temel servislerin calistigini kontrol et.
-- Guvenlik ayarlarinin aktif oldugunu test et.
-
-## Notlar
-- Bu bolum bir iskelet olarak tasarlanmistir; ortam ve politika gereksinimlerine gore genisletilmelidir.
+## Rutin Checklist
+- [ ] Patch penceresi
+- [ ] RHSM kontrolu
+- [ ] Audit log kontrolu

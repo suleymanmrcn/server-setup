@@ -3,25 +3,25 @@ title: Ubuntu Guvenlik Sertlestirme
 sidebar_position: 2
 ---
 
-## Amac
-Bu sayfa, **Ubuntu Guvenlik Sertlestirme** konusunun uretim odakli iskeletini sunar.
+Ubuntu uzerinde SSH, UFW ve AppArmor sertlestirme adimlarini verir.
 
-## Kapsam
-- Bu bolum temel kararlar, varsayimlar ve minimum guvenlik beklentilerini kapsar.
+## SSH
+- Root login kapali
+- Password auth kapali
 
-## Icerik Plani
-- UFW ve kurallar
-- SSH port degisimi
-- AppArmor profilleri
+## UFW
+```sh
+sudo ufw default deny incoming
+sudo ufw allow 2222/tcp
+sudo ufw enable
+```
 
-## Uygulama Adimlari
-1. Gereksinimleri dogrula ve onayla.
-2. Varsayilanlari guvenli hale getir.
-3. Degisiklikleri kaydet ve izlenebilirlik sagla.
+## AppArmor
+```sh
+sudo aa-status
+```
 
-## Dogrulama
-- Temel servislerin calistigini kontrol et.
-- Guvenlik ayarlarinin aktif oldugunu test et.
-
-## Notlar
-- Bu bolum bir iskelet olarak tasarlanmistir; ortam ve politika gereksinimlerine gore genisletilmelidir.
+## Kontrol Listesi
+- [ ] SSH anahtar tabanli
+- [ ] UFW aktif
+- [ ] AppArmor profilleri yuklu

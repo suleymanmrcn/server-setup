@@ -3,25 +3,23 @@ title: Performans Ayari ve Kernel Tuning
 sidebar_position: 1
 ---
 
-## Amac
-Bu sayfa, **Performans Ayari ve Kernel Tuning** konusunun uretim odakli iskeletini sunar.
+Uretim oncesi performans iyilestirme ve temel kernel ayarlarini ozetler.
 
-## Kapsam
-- Bu bolum temel kararlar, varsayimlar ve minimum guvenlik beklentilerini kapsar.
+## Sysctl Ornekleri
+```sh
+# /etc/sysctl.d/99-tuning.conf
+net.core.somaxconn = 1024
+net.ipv4.tcp_fin_timeout = 30
+net.ipv4.tcp_tw_reuse = 1
+```
 
-## Icerik Plani
-- Kernel parametreleri
-- sysctl bazlari
-- limits.conf
+## Limits Ornekleri
+```sh
+# /etc/security/limits.conf
+* soft nofile 65535
+* hard nofile 65535
+```
 
-## Uygulama Adimlari
-1. Gereksinimleri dogrula ve onayla.
-2. Varsayilanlari guvenli hale getir.
-3. Degisiklikleri kaydet ve izlenebilirlik sagla.
-
-## Dogrulama
-- Temel servislerin calistigini kontrol et.
-- Guvenlik ayarlarinin aktif oldugunu test et.
-
-## Notlar
-- Bu bolum bir iskelet olarak tasarlanmistir; ortam ve politika gereksinimlerine gore genisletilmelidir.
+## Kontrol
+- Load ve IO metrikleri
+- Network backlog ve socket limitleri

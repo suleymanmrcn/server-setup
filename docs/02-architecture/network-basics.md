@@ -3,25 +3,24 @@ title: Ag Topolojisi ve IP Plani
 sidebar_position: 2
 ---
 
-## Amac
-Bu sayfa, **Ag Topolojisi ve IP Plani** konusunun uretim odakli iskeletini sunar.
+IP planini, DNS ve subnet stratejisini operasyonel bakisla netlestirir.
 
-## Kapsam
-- Bu bolum temel kararlar, varsayimlar ve minimum guvenlik beklentilerini kapsar.
+## IP Plani Pratikleri
+- Public ve private araliklar ayrilir.
+- Gateway ve DNS kayitlari en basta belirlenir.
+- Reverse DNS kritik servisler icin zorunludur.
 
-## Icerik Plani
-- Subnet ve VLAN tasarimi
-- DNS ve reverse
-- NTP ve zaman senkron
+## Topoloji Secimi
+- Tek subnet: hizli kurulum, dusuk izolasyon.
+- Cok subnet: daha guvenli, daha fazla yonetim.
+- VLAN: kritik servisleri ayirir.
 
-## Uygulama Adimlari
-1. Gereksinimleri dogrula ve onayla.
-2. Varsayilanlari guvenli hale getir.
-3. Degisiklikleri kaydet ve izlenebilirlik sagla.
+## Kontrol Listesi
+- [ ] IP araligi belirlendi
+- [ ] Gateway ve DNS net
+- [ ] Public/private ayrimi var
+- [ ] NTP kaynagi tanimli
 
-## Dogrulama
-- Temel servislerin calistigini kontrol et.
-- Guvenlik ayarlarinin aktif oldugunu test et.
-
-## Notlar
-- Bu bolum bir iskelet olarak tasarlanmistir; ortam ve politika gereksinimlerine gore genisletilmelidir.
+## Ornek
+- Public subnet: LB ve bastion
+- Private subnet: app ve DB

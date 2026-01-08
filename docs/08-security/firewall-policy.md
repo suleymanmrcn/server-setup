@@ -3,25 +3,34 @@ title: Firewall Politikasi ve Uygulama
 sidebar_position: 2
 ---
 
-## Amac
-Bu sayfa, **Firewall Politikasi ve Uygulama** konusunun uretim odakli iskeletini sunar.
+Default deny politikasiyla port acma kurallarini netlestirir.
 
-## Kapsam
-- Bu bolum temel kararlar, varsayimlar ve minimum guvenlik beklentilerini kapsar.
+## Politika
+- Inbound: default deny
+- Outbound: kontrollu allow
+- Servis bazli acilis
 
-## Icerik Plani
-- Port acma/kapama
-- Default deny
-- UFW vs firewalld
+## UFW (Ubuntu)
+```sh
+sudo ufw default deny incoming
+sudo ufw allow 2222/tcp
+sudo ufw enable
+```
 
-## Uygulama Adimlari
-1. Gereksinimleri dogrula ve onayla.
-2. Varsayilanlari guvenli hale getir.
-3. Degisiklikleri kaydet ve izlenebilirlik sagla.
+## firewalld (RHEL tabanli)
+```sh
+sudo firewall-cmd --set-default-zone=public
+sudo firewall-cmd --add-port=2222/tcp --permanent
+sudo firewall-cmd --reload
+```
 
 ## Dogrulama
-- Temel servislerin calistigini kontrol et.
-- Guvenlik ayarlarinin aktif oldugunu test et.
+```sh
+ufw status
+# veya
+firewall-cmd --list-all
+```
 
-## Notlar
-- Bu bolum bir iskelet olarak tasarlanmistir; ortam ve politika gereksinimlerine gore genisletilmelidir.
+## Sik Hatalar
+- Kurallari kalici yapmamak
+- Tum portlari acmak

@@ -3,25 +3,17 @@ title: Kurulum Planlama
 sidebar_position: 1
 ---
 
-## Amac
-Bu sayfa, **Kurulum Planlama** konusunun uretim odakli iskeletini sunar.
+Kurulum oncesi kararlarin belirlenmesi ve hatali baslangiclari engeller.
 
-## Kapsam
-- Bu bolum temel kararlar, varsayimlar ve minimum guvenlik beklentilerini kapsar.
+## Karar Listesi
+- ISO/AMI kaynagi resmi mi?
+- Minimal kurulum secildi mi?
+- Disk plani ve LVM onaylandi mi?
+- Ag/IP/DNS bilgileri net mi?
 
-## Icerik Plani
-- ISO/AMI secimi
-- Kurulum profilleri
-- Otomasyon stratejisi
+## Otomasyon
+- Kickstart, preseed, cloud-init
+- Tekrarlanabilir kurulum icin script
 
-## Uygulama Adimlari
-1. Gereksinimleri dogrula ve onayla.
-2. Varsayilanlari guvenli hale getir.
-3. Degisiklikleri kaydet ve izlenebilirlik sagla.
-
-## Dogrulama
-- Temel servislerin calistigini kontrol et.
-- Guvenlik ayarlarinin aktif oldugunu test et.
-
-## Notlar
-- Bu bolum bir iskelet olarak tasarlanmistir; ortam ve politika gereksinimlerine gore genisletilmelidir.
+## Cikis Kriteri
+- Kuruluma baslamadan once tum kararlar yazili hale gelir.

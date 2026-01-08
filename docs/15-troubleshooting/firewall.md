@@ -3,10 +3,24 @@ title: Firewall Sorunlari
 sidebar_position: 4
 ---
 
-## Belirtiler
+## Belirti
 - Port acik gorunmuyor
-- Servis disaridan erisimiyor
+- Disaridan servis erisilemiyor
 
-## Kontrol
-- ufw status veya firewall-cmd --list-all
-- ss -lntp
+## Hizli Kontrol
+```sh
+ss -lntp
+ufw status
+# veya
+firewall-cmd --list-all
+```
+
+## Olasi Sebepler
+- Kurallar kalici degil
+- Yanlis zone
+- SG veya NACL blokluyor
+
+## Cozum Akisi
+1. Lokal portu dogrula (ss)
+2. Firewall kuralini kontrol et
+3. Cloud SG/NACL kontrol et

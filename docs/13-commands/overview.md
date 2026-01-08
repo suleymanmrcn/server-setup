@@ -3,9 +3,14 @@ title: Hazir Komutlar Genel Bakis
 sidebar_position: 1
 ---
 
-## Amac
-Bu bolum, production icin guvenli komut orneklerini hizli erisim icin sunar.
+Uretimde sik kullanilan komutlari senaryolara gore toplar.
 
-## Kullanma Sekli
-- Komutlari calistirmadan once ortamini kontrol et.
-- Degisiklikleri kayit altina al.
+## Kategoriler
+- SSH ve erisim
+- Firewall
+- Kullanici ve yetki
+- Servis ve log
+- Diagnostik
+
+## Not
+Komutlari calistirmadan once ortam ve politika onayi al.

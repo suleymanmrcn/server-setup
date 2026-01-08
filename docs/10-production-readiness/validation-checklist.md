@@ -3,25 +3,16 @@ title: Uretim Oncesi Dogrulama
 sidebar_position: 2
 ---
 
-## Amac
-Bu sayfa, **Uretim Oncesi Dogrulama** konusunun uretim odakli iskeletini sunar.
+Uretime cikmadan once minimum dogrulama listesi.
 
-## Kapsam
-- Bu bolum temel kararlar, varsayimlar ve minimum guvenlik beklentilerini kapsar.
+## Checklist
+- [ ] SSH anahtar tabanli erisim
+- [ ] Root login kapali
+- [ ] Firewall default deny
+- [ ] Monitoring aktif
+- [ ] Backup ve restore testi yapildi
+- [ ] Patch penceresi tanimli
+- [ ] Log rotasyonu aktif
 
-## Icerik Plani
-- Smoke test
-- Guvenlik kontrol
-- Kapasite test
-
-## Uygulama Adimlari
-1. Gereksinimleri dogrula ve onayla.
-2. Varsayilanlari guvenli hale getir.
-3. Degisiklikleri kaydet ve izlenebilirlik sagla.
-
-## Dogrulama
-- Temel servislerin calistigini kontrol et.
-- Guvenlik ayarlarinin aktif oldugunu test et.
-
-## Notlar
-- Bu bolum bir iskelet olarak tasarlanmistir; ortam ve politika gereksinimlerine gore genisletilmelidir.
+## Not
+Eksik madde varsa uretime cikma.

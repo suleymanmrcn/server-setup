@@ -4,9 +4,13 @@ sidebar_position: 6
 ---
 
 ## Loglar
-- journalctl -xe
-- tail -f /var/log/auth.log
+```sh
+journalctl -xe
+tail -f /var/log/auth.log
+```
 
 ## Sistem
-- dmesg -T | tail
-- ss -lntp
+```sh
+dmesg -T | tail
+ss -lntp
+```

@@ -1,7 +1,6 @@
 ---
 title: Production Server Setup Guide
 sidebar_position: 1
-slug: /
 ---
 
 <div class="doc-hero">

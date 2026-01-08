@@ -3,25 +3,23 @@ title: Ubuntu Kurulum
 sidebar_position: 1
 ---
 
-## Amac
-Bu sayfa, **Ubuntu Kurulum** konusunun uretim odakli iskeletini sunar.
+Ubuntu uzerinde production-ready kurulum akisini ozetler.
 
-## Kapsam
-- Bu bolum temel kararlar, varsayimlar ve minimum guvenlik beklentilerini kapsar.
+## Kurulum Tercihi
+- Minimal kurulum.
+- Disk planina uygun LVM.
+- Hostname ve timezone ayari.
 
-## Icerik Plani
-- Minimal kurulum secimi
-- Netplan ve NIC
-- Acil durum erisimi
+## Ag
+- Netplan ile statik IP
+- DNS ve NTP dogrulama
 
-## Uygulama Adimlari
-1. Gereksinimleri dogrula ve onayla.
-2. Varsayilanlari guvenli hale getir.
-3. Degisiklikleri kaydet ve izlenebilirlik sagla.
+## Baslangic Sonrasi
+- apt update/upgrade
+- Ops kullanici + sudo
+- SSH hardening
 
-## Dogrulama
-- Temel servislerin calistigini kontrol et.
-- Guvenlik ayarlarinin aktif oldugunu test et.
-
-## Notlar
-- Bu bolum bir iskelet olarak tasarlanmistir; ortam ve politika gereksinimlerine gore genisletilmelidir.
+## Kontrol
+- `lsb_release -a`
+- `ip a`, `ip r`
+- `systemctl status sshd`

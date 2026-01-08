@@ -4,9 +4,14 @@ sidebar_position: 3
 ---
 
 ## UFW (Ubuntu)
-- ufw allow 22/tcp
-- ufw enable
+```sh
+sudo ufw default deny incoming
+sudo ufw allow 2222/tcp
+sudo ufw enable
+```
 
-## firewalld (RHEL/CentOS/Rocky)
-- firewall-cmd --add-service=ssh --permanent
-- firewall-cmd --reload
+## firewalld (RHEL tabanli)
+```sh
+sudo firewall-cmd --add-port=2222/tcp --permanent
+sudo firewall-cmd --reload
+```

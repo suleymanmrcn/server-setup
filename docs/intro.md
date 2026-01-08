@@ -1,7 +1,6 @@
 ---
 title: Uretim Sunucu Kurulum Rehberi
 sidebar_position: 1
-slug: /
 ---
 
 <div class="doc-hero">
@@ -39,13 +38,25 @@ slug: /
   </div>
 </div>
 
-## Kapsam
-- Bu bolum temel kararlar, varsayimlar ve minimum guvenlik beklentilerini kapsar.
+## Hizli Baslangic
+1. `foundations/scope` ile hedef ve kapsamdan basla.
+2. `installation-common/install-planning` ile kurulum stratejini sec.
+3. `security/ssh-hardening` ve `security/firewall-policy` ile guvenlik katmanini uygula.
+4. `operations/updates-patching` ve `operations/monitoring-logging` ile operasyonu netlestir.
 
-## Icerik Plani
-- Hedef kitle ve kullanim senaryolari
-- Kapsam: Ubuntu, CentOS, RHEL, Rocky/Alma
-- Guvenlik, operasyon ve uretim hazirligi
+## Dokuman Haritasi
+- Temeller: kapsam, on kosullar, destek matrisi
+- Mimari: ag, depolama ve referans topoloji
+- Kurulum: planlama, LVM, baseline
+- Dagitimlar: Ubuntu, CentOS, RHEL, Rocky/Alma
+- Guvenlik: SSH, firewall, SELinux/AppArmor, fail2ban, auditd
+- Operasyon: patch, log, yedekleme, monitoring
+- Teknik Bilgi: container, dependency, secrets, cloud ag
+
+## Bu Rehber Ne Degil?
+- Uygulama deployment kilavuzu degil.
+- Cloud provider'a ozel detayli kurulum degil.
+- Her kuruma ozel policy belgesi degil.
 
 ---
 
@@ -57,14 +68,9 @@ Default ayarlar guvenli kabul edilmez. Uretime cikmadan once SSH, firewall ve er
 Patch pencereleri, geri alma ve izleme olmadan uretim hazirligi tamamlanmis sayilmaz.
 :::
 
-## Uygulama Adimlari
-1. Gereksinimleri dogrula ve onayla.
-2. Varsayilanlari guvenli hale getir.
-3. Degisiklikleri kaydet ve izlenebilirlik sagla.
-
-## Dogrulama
-- Temel servislerin calistigini kontrol et.
-- Guvenlik ayarlarinin aktif oldugunu test et.
-
-## Notlar
-- Bu bolum bir iskelet olarak tasarlanmistir; ortam ve politika gereksinimlerine gore genisletilmelidir.
+## Uretim Oncelikleri
+- Erisim: anahtar tabanli SSH, root kapali
+- Ag: default deny, sadece gerekli portlar
+- Log: merkezi toplama ve rotasyon
+- Patch: planli guncelleme penceresi
+- Yedek: geri donus testi

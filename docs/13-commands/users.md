@@ -4,9 +4,16 @@ sidebar_position: 4
 ---
 
 ## Kullanici
-- useradd -m opsuser
-- passwd opsuser
+```sh
+sudo useradd -m opsuser
+sudo passwd opsuser
+```
 
 ## Sudo
-- usermod -aG sudo opsuser (Ubuntu)
-- usermod -aG wheel opsuser (RHEL tabanli)
+```sh
+# Ubuntu
+sudo usermod -aG sudo opsuser
+
+# RHEL tabanli
+sudo usermod -aG wheel opsuser
+```

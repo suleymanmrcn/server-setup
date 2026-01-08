@@ -3,25 +3,36 @@ title: Kapsam ve Hedefler
 sidebar_position: 1
 ---
 
-## Amac
-Bu sayfa, **Kapsam ve Hedefler** konusunun uretim odakli iskeletini sunar.
+Bu rehberin neyi hedefledigi, neyi kapsamadigi ve uretim standardini tanimlar.
+
+## Hedef Kitle
+- Sistem yoneticileri
+- DevOps/SRE ekipleri
+- Uretimde Linux sunucu yoneten teknik ekipler
+
+## Uretim Tanimi (Minimum)
+- Erişim: anahtar tabanli SSH, root login kapali
+- Ag: default deny firewall, sadece gerekli portlar acik
+- Izleme: metrik + log toplama aktif
+- Yedek: geri donus testi yapilmis
+- Patch: planli guncelleme penceresi var
 
 ## Kapsam
-- Bu bolum temel kararlar, varsayimlar ve minimum guvenlik beklentilerini kapsar.
+- Ubuntu, CentOS, RHEL, Rocky/Alma
+- Kurulum, guvenlik, operasyon
+- Cloud ag temelleri ve secrets pratikleri
 
-## Icerik Plani
-- Uretim hedefleri
-- Riskler ve varsayimlar
-- Cizgiler ve sinirlar
+## Kapsam Disi
+- Uygulama deployment rehberleri
+- Cloud provider ozel detayli kurulumlar
+- Kurum ici SLA/policy belgeleri
 
-## Uygulama Adimlari
-1. Gereksinimleri dogrula ve onayla.
-2. Varsayilanlari guvenli hale getir.
-3. Degisiklikleri kaydet ve izlenebilirlik sagla.
+## Ornek Senaryolar
+- Yeni uretim sunucusu ayagi kaldirma
+- Mevcut sunucuyu guvenlik baseline'a cekme
+- Ops ekibi icin runbook cikarma
 
-## Dogrulama
-- Temel servislerin calistigini kontrol et.
-- Guvenlik ayarlarinin aktif oldugunu test et.
-
-## Notlar
-- Bu bolum bir iskelet olarak tasarlanmistir; ortam ve politika gereksinimlerine gore genisletilmelidir.
+## Basari Kriterleri
+- En az 1 distro icin kurulum + hardening tamam
+- Firewall ve SSH politikasi dokumante
+- Monitoring ve backup test edilmis

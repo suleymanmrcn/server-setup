@@ -3,25 +3,20 @@ title: SELinux / AppArmor Politikasi
 sidebar_position: 3
 ---
 
-## Amac
-Bu sayfa, **SELinux / AppArmor Politikasi** konusunun uretim odakli iskeletini sunar.
+MAC (zorunlu erisim kontrolu) katmanini uretime uygun hale getirir.
 
-## Kapsam
-- Bu bolum temel kararlar, varsayimlar ve minimum guvenlik beklentilerini kapsar.
+## SELinux (RHEL tabanli)
+- Mode: Enforcing (uretim), Permissive (test)
+- Kontrol: `getenforce`, `sestatus`
 
-## Icerik Plani
-- Mode secimi
-- Policy yonetimi
-- Audit ve troubleshooting
+## AppArmor (Ubuntu)
+- Profil bazli kisitlama
+- Kontrol: `aa-status`
 
-## Uygulama Adimlari
-1. Gereksinimleri dogrula ve onayla.
-2. Varsayilanlari guvenli hale getir.
-3. Degisiklikleri kaydet ve izlenebilirlik sagla.
+## Uygulama Notlari
+- Policy degisiklikleri log ile izlenmeli.
+- Servis bozarsa permissive ile tespit, sonra policy guncelle.
 
-## Dogrulama
-- Temel servislerin calistigini kontrol et.
-- Guvenlik ayarlarinin aktif oldugunu test et.
-
-## Notlar
-- Bu bolum bir iskelet olarak tasarlanmistir; ortam ve politika gereksinimlerine gore genisletilmelidir.
+## Sik Hatalar
+- SELinux tamamen kapatmak
+- Profil degisikligini dokumante etmemek

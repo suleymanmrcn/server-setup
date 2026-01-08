@@ -3,25 +3,22 @@ title: Bolumlendirme ve LVM
 sidebar_position: 2
 ---
 
-## Amac
-Bu sayfa, **Bolumlendirme ve LVM** konusunun uretim odakli iskeletini sunar.
+Disk bolumlendirme ve LVM kararlarini uretim icin netlestirir.
 
-## Kapsam
-- Bu bolum temel kararlar, varsayimlar ve minimum guvenlik beklentilerini kapsar.
+## Temel Plan
+- /boot: 1G
+- /: 20G
+- /var: 40G
+- /home: 5G
+- swap: 2-4G
 
-## Icerik Plani
-- /boot, /, /var, /home plan
-- Swap boyutlama
-- LVM genisletme
+## Neden /var Ayri?
+- Log ve veri buyumesi sistem bolumunu sisirmez.
+- Servislerin stabil kalmasini saglar.
 
-## Uygulama Adimlari
-1. Gereksinimleri dogrula ve onayla.
-2. Varsayilanlari guvenli hale getir.
-3. Degisiklikleri kaydet ve izlenebilirlik sagla.
+## LVM Avantajlari
+- Disk genisletme kolayligi
+- Snapshot ile geri donus
 
-## Dogrulama
-- Temel servislerin calistigini kontrol et.
-- Guvenlik ayarlarinin aktif oldugunu test et.
-
-## Notlar
-- Bu bolum bir iskelet olarak tasarlanmistir; ortam ve politika gereksinimlerine gore genisletilmelidir.
+## Not
+Uygulama IO ihtiyaci yuksekse ayrik disk kullan.

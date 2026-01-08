@@ -3,25 +3,25 @@ title: CentOS Operasyon ve Bakim
 sidebar_position: 3
 ---
 
-## Amac
-Bu sayfa, **CentOS Operasyon ve Bakim** konusunun uretim odakli iskeletini sunar.
+CentOS uretim sistemlerinde patch, log ve sistem bakim akisini verir.
 
-## Kapsam
-- Bu bolum temel kararlar, varsayimlar ve minimum guvenlik beklentilerini kapsar.
+## Patch Akisi
+```sh
+sudo dnf -y update
+```
 
-## Icerik Plani
-- dnf/yum rutinleri
-- Reboot stratejisi
-- Kernel temizligi
+## Log Kontrol
+```sh
+journalctl -p warning -b
+```
 
-## Uygulama Adimlari
-1. Gereksinimleri dogrula ve onayla.
-2. Varsayilanlari guvenli hale getir.
-3. Degisiklikleri kaydet ve izlenebilirlik sagla.
+## Disk ve Kernel
+```sh
+df -h
+rpm -q kernel
+```
 
-## Dogrulama
-- Temel servislerin calistigini kontrol et.
-- Guvenlik ayarlarinin aktif oldugunu test et.
-
-## Notlar
-- Bu bolum bir iskelet olarak tasarlanmistir; ortam ve politika gereksinimlerine gore genisletilmelidir.
+## Rutin Checklist
+- [ ] Patch penceresi
+- [ ] Log rotasyonu
+- [ ] Disk izleme

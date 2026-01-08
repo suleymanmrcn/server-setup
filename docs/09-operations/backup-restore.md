@@ -3,25 +3,17 @@ title: Yedekleme ve Geri Donus
 sidebar_position: 3
 ---
 
-## Amac
-Bu sayfa, **Yedekleme ve Geri Donus** konusunun uretim odakli iskeletini sunar.
+Yedekleme stratejisi ve geri donus testi icin temel prensipler.
 
-## Kapsam
-- Bu bolum temel kararlar, varsayimlar ve minimum guvenlik beklentilerini kapsar.
+## 3-2-1
+- 3 kopya
+- 2 farkli ortam
+- 1 offline
 
-## Icerik Plani
-- 3-2-1 stratejisi
-- Snapshot vs backup
-- Dogrulama
+## Test Zorunlu
+- Backup almak yeterli degil
+- Periyodik restore testi yap
 
-## Uygulama Adimlari
-1. Gereksinimleri dogrula ve onayla.
-2. Varsayilanlari guvenli hale getir.
-3. Degisiklikleri kaydet ve izlenebilirlik sagla.
-
-## Dogrulama
-- Temel servislerin calistigini kontrol et.
-- Guvenlik ayarlarinin aktif oldugunu test et.
-
-## Notlar
-- Bu bolum bir iskelet olarak tasarlanmistir; ortam ve politika gereksinimlerine gore genisletilmelidir.
+## Ornek Kontrol
+- [ ] Son backup tarihi
+- [ ] Restore testi raporu
