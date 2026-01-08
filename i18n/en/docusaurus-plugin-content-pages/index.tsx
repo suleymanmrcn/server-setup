@@ -23,11 +23,8 @@ export default function Home(): ReactNode {
                 Security and operations flows for Ubuntu, CentOS, RHEL, and Rocky/Alma.
               </p>
               <div className={styles.heroActions}>
-                <Link className="button button--primary" to="/docs/">
+                <Link className="button button--primary" to="/docs/intro">
                   Open Docs
-                </Link>
-                <Link className="button button--outline button--primary" to="/docs/quiz/quiz-overview">
-                  Quizzes
                 </Link>
               </div>
             </div>
